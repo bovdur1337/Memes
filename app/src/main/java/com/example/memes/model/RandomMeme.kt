@@ -1,13 +1,11 @@
 package com.example.memes.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "memeInfo")
 data class RandomMeme(
-    val author: String,
-    val nsfw: Boolean,
+    @PrimaryKey
     val postLink: String,
-    val preview: List<String>,
-    val spoiler: Boolean,
-    val subreddit: String,
-    val title: String,
-    val ups: Int,
     val url: String
 )
